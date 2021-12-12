@@ -1,0 +1,77 @@
+.Sequencer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.Grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.ActionButtons {
+  display: flex;
+}
+
+.ActionButton {
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border-radius: 12px;
+  display: inline-block;
+  max-width: 120px;
+  background: #e28743;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.ToggleButton:hover {
+  opacity: 0.7;
+}
+
+.StepHeaderContainer {
+  display: flex;
+}
+
+.StepHeader {
+  margin: 0.4rem;
+  width: 50px;
+  position: relative;
+  border-width: 3;
+}
+
+.StepHeaderActive::after {
+  content: "placeholder";
+  color: transparent;
+  background: #e28743;
+  opacity: 0.3;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  max-width: 50px;
+  display: block;
+  margin: 0.7rem 0;
+  pointer-events: none;
+}
+
+.Button {
+  margin: 0.4rem;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.Button:hover {
+  border-color: #e28743;
+}
