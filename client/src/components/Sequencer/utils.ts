@@ -21,12 +21,20 @@ export const makeSynths = (count: number) => {
   });
 };
 
-export const makeGrid = (notes: string[] = defaultNotes, length = 16) => {
+export const makeGrid = ({
+  notes = defaultNotes,
+  length = 16,
+  cleanRatio = 0.85,
+}: {
+  notes?: string[];
+  length?: number;
+  cleanRatio?: number;
+} = {}) => {
   return notes.map((note) => {
     return Array.from({ length }, () => {
       return {
         note: note,
-        isActive: Math.random() > 0.85,
+        isActive: Math.random() > cleanRatio,
       };
     });
   });
